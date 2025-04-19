@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>水课大王 - 请假条生成系统</title>
+
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -142,7 +143,80 @@
                  class="runtime-screenshot" 
                  alt="程序运行界面截图">
         </div>
+<!-- 在标题下方添加下载按钮模块 -->
+<section class="download-section">
+    <h2>📥 获取安装包</h2>
+    <div class="download-buttons">
+        <a href="https://github.com/skdwwang/skdwwang.github.io/archive/refs/tags/release.zip" 
+           class="download-btn windows-btn">
+            Python 完整版 v1.0 (Windows)
+            <span class="file-size">ZIP 8.5MB</span>
+        </a>
+        <button class="download-btn coming-soon" disabled>
+            EXE 单文件版 (即将推出)
+            <span class="file-size">正在打包中</span>
+        </button>
+    </div>
+    <p class="version-note">当前最新稳定版本：v1.0.20240612</p>
+</section>
 
+<style>
+/* 新增下载按钮样式 */
+.download-section {
+    margin: 40px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.download-buttons {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.download-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+}
+
+.windows-btn {
+    background: #218838;
+    color: white;
+    border-color: #1e7e34;
+}
+
+.coming-soon {
+    background: #6c757d;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.file-size {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 8px;
+}
+
+.version-note {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: center;
+}
+</style>
         <!-- ======= 主要功能 ======= -->
         <section>
             <h2>📌 核心功能</h2>
