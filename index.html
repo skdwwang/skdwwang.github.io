@@ -128,6 +128,22 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             border-top: 3px solid var(--secondary-color);
         }
+        .screenshot-box {
+    max-width: 1200px;  /* 限制最大显示宽度 */
+    margin: 20px auto;  /* 上下间距20px，左右自动居中 */
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.runtime-screenshot {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);  /* 保持原有阴影效果 */
+    transition: transform 0.3s ease;  /* 悬停动画 */
+}
+
+.runtime-screenshot:hover {
+    transform: scale(1.02);  /* 悬停时轻微放大 */
+}
     </style>
 </head>
 <body>
