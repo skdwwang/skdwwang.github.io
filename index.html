@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水课大王 - 请假条生成系统</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .title-en {
+            font-size: 0.6em;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            padding: 10px 0;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        /* 新增图片容器样式 */
+        .screenshot-box {
+            margin: 40px 0;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 2px dashed var(--secondary-color);
+        }
+
+        .runtime-screenshot {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+        }
+
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            水课大王
+            <span class="title-en">skdwwang</span>
+        </h1>
+
+        <!-- ======= 截图占位区域 ======= -->
+        <div class="screenshot-box">
+            <img src="skdwwang-ui-screenshot.png" 
+                 class="runtime-screenshot" 
+                 alt="程序运行界面截图">
+        </div>
+
+        <!-- ======= 主要功能 ======= -->
+        <section>
+            <h2>📌 核心功能</h2>
+            <div class="feature-list">
+                <div class="feature-card">
+                    <h3>智能表单录入</h3>
+                    <p>可视化界面支持日期选择、下拉菜单等交互控件</p>
+                </div>
+                <div class="feature-card">
+                    <h3>配置自动化</h3>
+                    <p>自动加载预设信息，减少重复输入</p>
+                </div>
+                <div class="feature-card">
+                    <h3>一键生成</h3>
+                    <p>快速生成带电子签名的标准请假条</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= 文件结构 ======= -->
+        <section>
+            <h2>📁 文件结构</h2>
+            <pre><code>.
+├── main.py          # 主程序
+├── config.ini       # 配置文件
+├── input.jpg        # 模板图片
+└── README.md        # 说明文档</code></pre>
+        </section>
+
+        <!-- ======= 使用指南 ======= -->
+        <section>
+            <h2>🚀 快速开始</h2>
+            <ol>
+                <li>安装依赖：
+                    <pre><code>pip install Pillow tkinter tkcalendar</code></pre>
+                </li>
+                <li>配置config.ini文件</li>
+                <li>运行程序：
+                    <pre><code>python main.py</code></pre>
+                </li>
+                <li>填写表单并生成请假条</li>
+            </ol>
+        </section>
+
+        <!-- ======= 配置说明 ======= -->
+        <section>
+            <h2>⚙️ 配置详解</h2>
+            <div class="warning">
+                <strong>配置须知：</strong>
+                <ul>
+                    <li>所有字段必须完整保留</li>
+                    <li>联系电话建议使用字符串格式</li>
+                </ul>
+            </div>
+            <pre><code class="language-ini">[Defaults]
+学院 = 计算机工程学院
+年级 = 2022级
+专业 = 软件工程
+班级 = 3班
+姓名 = 张三
+性别 = 男
+民族 = 汉族
+学号 = 2022080345
+电话 = 13800138000
+家长姓名 = 张大山
+家长电话 = 13900139000
+去处 = 校内宿舍
+原因 = 身体不适需要休息
+导员姓名 = 李老师</code></pre>
+        </section>
+
+        <!-- ======= 依赖说明 ======= -->
+        <section>
+            <h2>📦 依赖清单</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>组件</th>
+                        <th>用途</th>
+                        <th>版本</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pillow</td>
+                        <td>图片处理引擎</td>
+                        <td>9.0+</td>
+                    </tr>
+                    <tr>
+                        <td>tkcalendar</td>
+                        <td>日期选择控件</td>
+                        <td>1.6.1+</td>
+                    </tr>
+                    <tr>
+                        <td>configparser</td>
+                        <td>配置读取</td>
+                        <td>内置</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ======= 常见问题 ======= -->
+        <section>
+            <h2>❓ 故障排除</h2>
+            <div class="faq">
+                <h3>文字位置偏移</h3>
+                <p>✅ 请使用原始模板文件input.jpg</p>
+
+                <h3>日期计算错误</h3>
+                <p>✅ 检查开始日期是否早于结束日期</p>
+
+                <h3>生成失败</h3>
+                <p>✅ 确认已安装微软雅黑字体</p>
+            </div>
+        </section>
+
+        <!-- ======= 注意事项 ======= -->
+        <footer>
+            <h2>⚠️ 重要声明</h2>
+            <ul>
+                <li>本工具生成文件需经学校审核</li>
+                <li>电子签名位置不可调整</li>
+                <li>严禁用于非法用途</li>
+            </ul>
+            <p style="margin-top: 30px; color: #666; border-top: 1px solid #eee; padding-top: 20px;">
+                © 2024 水课大王(skdwwang) - 教育用途专用
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
