@@ -136,7 +136,142 @@
             水课大王
             <span class="title-en">skdwwang</span>
         </h1>
+<!-- 在标题和截图之间添加项目简介 -->
+<section>
+    <h2>🔖 项目简介</h2>
+    <p>本程序为定制化请假条生成工具，通过智能图像处理技术快速生成符合学校规范的电子请假条。需配合APP请假界面的竖版截图使用。</p>
+</section>
 
+<!-- 更新文件结构说明 -->
+<section>
+    <h2>📁 文件结构</h2>
+    <div class="warning">
+        <strong>核心文件要求：</strong>
+        <ul>
+            <li><code>input.jpg</code> 必须存在且保持原始命名</li>
+            <li>程序目录结构不可修改</li>
+        </ul>
+    </div>
+    <pre><code>.
+├── MyApp.exe        # 主程序（需管理员权限运行）
+├── input.jpg        # 空白假条模板（严禁删除）
+├── output.jpg       # 生成的假条文件
+└── config.ini       # 用户配置文件</code></pre>
+</section>
+
+<!-- 重构使用流程 -->
+<section>
+    <h2>🚀 使用流程</h2>
+    <div class="feature-list">
+        <div class="feature-card">
+            <h3>1. 准备素材</h3>
+            <ul>
+                <li>获取APP竖版请假界面截图</li>
+                <li>需包含完整系统状态栏</li>
+                <li>保存到程序同目录</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>2. 配置编辑</h3>
+            <ul>
+                <li>使用文本编辑器修改config.ini</li>
+                <li>保留所有方括号标题</li>
+                <li>所有字段必须完整填写</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>3. 运行程序</h3>
+            <ul>
+                <li>双击运行MyApp.exe</li>
+                <li>选择配置文件</li>
+                <li>填写申请信息</li>
+                <li>选择辅助照片</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 新增注意事项模块 -->
+<section>
+    <h2>⚠️ 注意事项</h2>
+    <div class="feature-list">
+        <div class="feature-card warning">
+            <h3>截图规范</h3>
+            <ul>
+                <li>必须包含完整系统状态栏</li>
+                <li>推荐iOS/Android原生截图</li>
+                <li>状态栏区域无遮挡</li>
+            </ul>
+        </div>
+        <div class="feature-card warning">
+            <h3>文件管理</h3>
+            <ul>
+                <li>每次生成前自动清除旧文件</li>
+                <li>定期备份config.ini</li>
+                <li>禁止修改程序目录结构</li>
+            </ul>
+        </div>
+        <div class="feature-card warning">
+            <h3>系统参数</h3>
+            <ul>
+                <li>向下压缩长度：默认40px</li>
+                <li>取样长度：默认120px</li>
+                <li>建议保持默认设置</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 增强技术支持说明 -->
+<section>
+    <h2>🛠 技术支持</h2>
+    <div class="warning">
+        <ul>
+            <li>运行环境：Windows 10/11 专业版</li>
+            <li>需要管理员权限运行</li>
+            <li>系统参数调整请联系开发者</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 更新免责声明 -->
+<footer>
+    <h2>⚖️ 免责声明</h2>
+    <ol class="legal-list">
+        <li>仅供学术研究及教学实践使用</li>
+        <li>生成内容由使用者全权负责</li>
+        <li>文件需在24小时内删除</li>
+        <li>个人信息字段均为虚构数据</li>
+        <li>临时文件自动清除</li>
+        <li>侵权问题联系校方信息中心</li>
+    </ol>
+</footer>
+
+<!-- 新增样式 -->
+<style>
+    .legal-list {
+        counter-reset: legal-counter;
+        padding-left: 2em;
+    }
+    .legal-list li {
+        counter-increment: legal-counter;
+        margin: 10px 0;
+        padding-left: 1.5em;
+        position: relative;
+    }
+    .legal-list li::before {
+        content: counter(legal-counter) ".";
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        color: var(--secondary-color);
+    }
+    
+    .feature-card.warning {
+        border-top-color: #ffc107;
+        background: #fff3cd;
+    }
+</style>
         <!-- ======= 截图占位区域 ======= -->
         <div class="screenshot-box">
             <img src="skdwwang-ui-screenshot.png" 
