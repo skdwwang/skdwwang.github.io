@@ -279,21 +279,60 @@
                  alt="程序运行界面截图">
         </div>
 <!-- 在标题下方添加下载按钮模块 -->
+<!-- 修改后的下载按钮模块 -->
 <section class="download-section">
     <h2>📥 获取安装包</h2>
     <div class="download-buttons">
-        <a href="https://github.com/skdwwang/skdwwang.github.io/archive/refs/tags/release.zip" 
-           class="download-btn windows-btn">
-            Python 完整版 v1.0 (Windows)
-            <span class="file-size">ZIP 8.5MB</span>
+        <a href="https://skdw.lanzouo.com/b02bwc54zi" 
+           class="download-btn source-btn"
+           target="_blank">
+            源代码完整版 v1.0
+            <span class="file-info">skdwwang_v1.0-src_full-20250511.zip (250.8KB)</span>
+            <span class="password-hint">密码: SKDW</span>
         </a>
-        <button class="download-btn coming-soon" disabled>
-            EXE 单文件版 (即将推出)
-            <span class="file-size">正在打包中</span>
-        </button>
+        <a href="https://skdw.lanzouo.com/b02bwc54zi" 
+           class="download-btn exe-btn"
+           target="_blank">
+            Windows 单文件版
+            <span class="file-info">skdwwang_v1.0-exe_windows-20250511.zip (38.4MB)</span>
+            <span class="password-hint">密码: SKDW</span>
+        </a>
     </div>
-    <p class="version-note">当前最新稳定版本：v1.0.20240612</p>
-</section>
+    <p class="version-note">编译日期：2025-05-11 | 密码不分大小写（为水课大王拼音缩写首字母）</p>
+</style>
+
+<style>
+/* 更新按钮样式 */
+.source-btn {
+    background: #17a2b8;
+    border-color: #117a8b;
+}
+
+.exe-btn {
+    background: #dc3545;
+    border-color: #bd2130;
+}
+
+.password-hint {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.9;
+    display: block;
+    color: #fff;
+}
+
+.file-info {
+    font-size: 0.9em;
+    opacity: 0.8;
+    display: block;
+    margin: 8px 0;
+}
+
+.version-note {
+    color: #dc3545;
+    font-weight: bold;
+}
+</style>
 
 <style>
 /* 新增下载按钮样式 */
